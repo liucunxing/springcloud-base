@@ -24,19 +24,19 @@ public class ResponseResult<T> {
         this.code = code;
         this.data = data;
     }
-    public static ResponseResult success(Object data){
+    public static <T> ResponseResult<T> success(T data){
         return new ResponseResult(200,data);
     }
-    public static ResponseResult success(String msg,Object data){
+    public static <T> ResponseResult<T> success(String msg,T data){
         return new ResponseResult(AppHttpCodeEnum.SUCCESS.getCode(), msg,data);
     }
-    public static ResponseResult error(String msg){
+    public static <T>ResponseResult<T> error(String msg){
         return new ResponseResult(AppHttpCodeEnum.SERVER_ERROR.getCode(), msg);
     }
-    public static ResponseResult error(Integer code,String msg,Object data){
+    public static <T> ResponseResult<T> error(Integer code,String msg,T data){
         return new ResponseResult(code,msg,data);
     }
-    public static ResponseResult error(Integer code,String msg){
+    public static <T> ResponseResult<T> error(Integer code,String msg){
         return new ResponseResult(code,msg,null);
     }
 }
