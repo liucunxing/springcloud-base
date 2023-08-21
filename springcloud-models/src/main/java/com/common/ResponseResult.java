@@ -2,7 +2,6 @@ package com.common;
 
 import lombok.Data;
 
-import java.io.Serializable;
 @Data
 public class ResponseResult<T> {
     private Integer code;
@@ -29,12 +28,15 @@ public class ResponseResult<T> {
         return new ResponseResult(200,data);
     }
     public static ResponseResult success(String msg,Object data){
-        return new ResponseResult(200,msg,data);
+        return new ResponseResult(AppHttpCodeEnum.SUCCESS.getCode(), msg,data);
     }
     public static ResponseResult error(String msg){
-        return new ResponseResult(500,msg);
+        return new ResponseResult(AppHttpCodeEnum.SERVER_ERROR.getCode(), msg);
     }
     public static ResponseResult error(Integer code,String msg,Object data){
         return new ResponseResult(code,msg,data);
+    }
+    public static ResponseResult error(Integer code,String msg){
+        return new ResponseResult(code,msg,null);
     }
 }
