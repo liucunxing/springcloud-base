@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.Console;
 import java.util.List;
 
 @RestController
@@ -22,6 +23,7 @@ public class paymentController {
     @GetMapping("/getList")
     @ApiOperation("payment测试")
     public ResponseResult<List<Payment>> getList(){
+        String a = "";
         return ResponseResult.success("payment列表",mapper.selectList(null));
     }
     @GetMapping("/getList1")
