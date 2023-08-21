@@ -5,5 +5,5 @@ import com.pojos.Payment;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
-public interface paymentMapper extends BaseMapper<Payment> {
+public interface PaymentMapper extends BaseMapper<Payment> {
 }

@@ -1,6 +1,6 @@
 package com.base.controller;
 
-import com.base.mapper.paymentMapper;
+import com.base.mapper.PaymentMapper;
 import com.common.ResponseResult;
 import com.pojos.Payment;
 import io.swagger.annotations.Api;
@@ -14,9 +14,9 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/payment")
 @Api(value = "payment",tags = "payment")
-public class paymentController {
+public class PaymentController {
     @Autowired
-    private paymentMapper mapper;
+    private PaymentMapper mapper;
 
     @GetMapping("/getList")
     @ApiOperation("payment测试")
