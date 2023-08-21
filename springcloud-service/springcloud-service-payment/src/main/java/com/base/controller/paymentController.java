@@ -23,12 +23,7 @@ public class paymentController {
     @GetMapping("/getList")
     @ApiOperation("payment测试")
     public ResponseResult<List<Payment>> getList(){
-        String a = "";
         return ResponseResult.success("payment列表",mapper.selectList(null));
     }
-    @GetMapping("/getList1")
-    @ApiOperation("payment测试")
-    public List<Payment> getList1(){
-        return mapper.selectList(null);
-    }
+
 }

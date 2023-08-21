@@ -8,8 +8,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springcloud-models" />
-        <module name="springcloud-service-payment" />
+        <module name="springcloud-utils" />
         <module name="springcloud-common" />
+        <module name="springcloud-service-payment" />
       </profile>
     </annotationProcessing>
   </component>
