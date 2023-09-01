@@ -2,5 +2,5 @@
 /target/
 
 # Ignore IDE files
-.idea/
+/.idea/*.xml
 .vscode/
