@@ -4,3 +4,4 @@
 # Ignore IDE files
 /.idea/*.xml
 .vscode/
+*.txt
